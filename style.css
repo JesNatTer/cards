@@ -6,12 +6,14 @@
 }
 
 body {
-  display: flex;
-  background-image: url(./images/mob-psycho-ep8-dimple.jpg);
+  display: grid;
+  background-image: url(https://i.picsum.photos/id/1022/6000/3376.jpg?hmac=FBA9Qbec8NfDlxj8xLhV9k3DQEKEc-3zxkQM-hmfcy0);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
+  padding:10%;
+  place-items: center;
 }
 
 .card-container {
@@ -19,7 +21,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10% 10%;
+  margin: 1%;
   background: rgba(56, 219, 7, 0.25);
   box-shadow: 0 8px 32px 0 rgba(186, 236, 6, 0.37);
   backdrop-filter: blur(4px);
@@ -32,6 +34,7 @@ body {
 .cards {
   display: flex;
   flex-direction: row;
+  border-radius: 10px;
 }
 
 .card {
@@ -43,8 +46,9 @@ body {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 33%;
+  width: 49%;
   margin: 20px;
+  overflow: hidden;
 }
 
 .card-info {
@@ -58,29 +62,37 @@ body {
 
 .card-info h2 {
   font-size: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .card-info p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.links {
-  margin: 5px;
+.card-links {
+display: flex;
+}
+
+.links{
+  width: 49%;
   background-color: greenyellow;
+  margin: 5px;
+  padding:10px;
+  text-align: center;
   border-radius: 10px;
-  padding: 10px 40px;
-  margin-bottom: 30px;
-}
-
-.links a {
   text-decoration: none;
+  color: black;
 }
 
 .card img {
-  height: 150px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  width: auto;
+  height:100%;
+  width: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width:1125px) {
+  .links{
+    display: flex;
+    flex-direction: column;
+  }
 }
